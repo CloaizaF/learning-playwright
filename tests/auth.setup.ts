@@ -11,6 +11,6 @@ setup("Create customer 01 auth", async ({ page, context }) => {
   await page.getByTestId("password").fill(password);
   await page.getByTestId("login-submit").click();
 
-  await expect(page.getByTestId("nav-menu")).toContainText("Janett Doe");
+  await expect(page.getByTestId("nav-menu")).toContainText("Jane Doe");
   await context.storageState({ path: customer01AuthFile });
 });
